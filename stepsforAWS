@@ -20,4 +20,4 @@ $kops create cluster \
 
 $kops update cluster pragra.k8s.local --yes
 
-#for deleting cluster
+$ kubectl cluster-info
