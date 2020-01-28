@@ -1,0 +1,15 @@
+#name space created
+$kubectl create -f filename.yaml 
+
+#Describe the name space'
+$ kubectl describe ns neme-dev
+
+create YAML file with POD
+
+$kubectl create -f pod.yaml --dry-run (it will not create POD but just to test)
+
+$kubectl create -f pod.yaml
+
+$kubectl get pod
+
+$kubectl get pod -o wide
