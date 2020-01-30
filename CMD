@@ -13,3 +13,11 @@ $kubectl create -f pod.yaml
 $kubectl get pod
 
 $kubectl get pod -o wide
+
+$kubectl get replicaset
+
+$kubectl delete replicaset my-app-replicaset
+
+$kubectl replace -f replicaset-defenition.yaml
+
+$kubectl scale -replicas=6 -f replica
