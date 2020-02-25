@@ -1,0 +1,31 @@
+Setting up the multinode cluster :-
+-----------------------------------------------------
+1. INSTAKll Virtual Box
+2.go to osboxes.org download the ubunto os and unzip it.'
+3.-------------------------------------------------------
+Kubeadm
+-------------------------------------------------------
+Master Node
+
+replica-controller
+node-controller'
+etcd
+kube-apiserver
+-------------------------------------------------------
+Worker Node 1
+</> kubectl
+Container runtime
+----------------------------------------------------------
+Worker Node 2
+</> kubectl
+Container runtime
+---------------------------------------------------------
+High level steps: -
+1. Set up master , worked node
+2. install docker in all the nodes
+3. Install kudeadm tool in all the nodes - kubeadm helps us bootstarps the kubernetes solution by installing and configuring in the right nodes.
+4. Initialize the master server- during this process all the requird component installed and configured in master node so taht we can start the master level configuration . once the master node is initialize and joines the cluster make sure that network pre-req is met.
+normal netwrk configuration is not sufficient for kubernetes cluster configuration.
+5. POD Network - kubernetes required special network between master and network node called pod NETWRK. or cluster netwrk
+6. last step is to join the worker node.
+d
