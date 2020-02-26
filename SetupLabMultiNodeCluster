@@ -28,4 +28,35 @@ High level steps: -
 normal netwrk configuration is not sufficient for kubernetes cluster configuration.
 5. POD Network - kubernetes required special network between master and network node called pod NETWRK. or cluster netwrk
 6. last step is to join the worker node.
-d
+----------------------------------------------------------
+4. refer the link https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/
+5. default password - osboxes.org
+for configuring SSH
+$apt-get update
+$sudo su
+$apt-get install openssh-server
+$service ssh status
+connect with ssh from terminal -- 
+$ ssh osboxes@1.198.11.51
+$shutdown now 
+to shutdown the machine and clone it 
+clone vm-1 and VM-2
+now set the host name
+$ sudo su
+$vi /etc/hostname
+keep as kubemaster
+$vi /etc/hosts
+attach adapter - 2 to all the three nodes (host-only-Adapter)
+reboot machine and set the IP
+$ ipconfig enp0s8 192.168.21.2
+this temporary ip , we need to set up a permamnt ip so that it should not changed
+$ vi etc/network/interfaces
+
+$ swapoff -a
+$vi etc/fstab
+
+on mastr node -->
+sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address=192.168.56.2
+Key for joining worker Nodes
+kubeadm join 192.168.56.2:6443 --token qecv3z.3evqinm1cazpn4ur \
+    --discovery-token-ca-cert-hash sha256:8e152e6985b03ed9e462c1458c3314a503a488a98878bed5b106cb49b743cc50 
