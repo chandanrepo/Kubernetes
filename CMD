@@ -28,3 +28,4 @@ $ kubectl get pods -n kube-system
 $ service kube-apiserver status
 $ service kube-controller-manager status
 $ service kube-scheduler status
+$ kubectl get service
