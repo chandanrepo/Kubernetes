@@ -22,7 +22,7 @@ $kubectl replace -f replicaset-defenition.yaml
 
 $kubectl scale -replicas=6 -f replica
 -------------------------------------------
-Manual Testing
+Manual Testing | Other Tool can be used - SONOBUOY
 ------------------------------------------
 $ kubectl get pods -n kube-system
 $ service kube-apiserver status
